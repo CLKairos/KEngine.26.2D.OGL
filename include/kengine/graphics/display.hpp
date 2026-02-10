@@ -24,7 +24,7 @@ typedef void* SDL_GLContext;
 typedef unsigned int GLuint;
 typedef float GLfloat;
 
-#ifdef STELLA_BUILD_EDITOR
+#ifdef KENGINE_BUILD_EDITOR
 namespace kengine
 {
 namespace editor
@@ -72,7 +72,7 @@ namespace graphics
     glm::vec3 ClearColor;
     SDL_Event m_event;
 
-#ifdef STELLA_BUILD_EDITOR
+#ifdef KENGINE_BUILD_EDITOR
     friend class kengine::editor::Editor;
 #endif
 

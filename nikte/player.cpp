@@ -1,5 +1,5 @@
 #include "player.hpp"
-#include <stella/graphics/display.hpp>
+#include <kengine/graphics/display.hpp>
 #ifdef _WIN32
   #include <SDL.h>
 #else
@@ -8,13 +8,13 @@
 #undef main
 #include <iostream>
 
-Player::Player (entt::registry& registry, stella::graphics::Display& display) : m_registry (registry), Display (display)
+Player::Player (entt::registry& registry, kengine::graphics::Display& display) : m_registry (registry), Display (display)
 {
 }
 
 void Player::update()
 {
-  auto& body = m_registry.get<stella::component::Body2D> (entity);
+  auto& body = m_registry.get<kengine::component::Body2D> (entity);
 
   if (this->Display.IsKeyDown (SDL_SCANCODE_UP))
   {
@@ -36,22 +36,22 @@ void Player::update()
     body.Body->MoveRight();
   }
 
-  if (m_registry.has<stella::component::AnimationPlayer> (entity))
+  if (m_registry.has<kengine::component::AnimationPlayer> (entity))
   {
-    auto& anims = m_registry.get<stella::component::AnimationPlayer> (entity);
+    auto& anims = m_registry.get<kengine::component::AnimationPlayer> (entity);
     this->SetState (body, anims);
   }
 }
 
-void Player::SetState (const stella::component::Body2D& body, stella::component::AnimationPlayer& anims)
+void Player::SetState (const kengine::component::Body2D& body, kengine::component::AnimationPlayer& anims)
 {
   std::string animation_name = "";
   switch (body.Body->state)
   {
-    case stella::topdown::BodyState::IDLE:
+    case kengine::topdown::BodyState::IDLE:
       animation_name.append ("idle-");
       break;
-    case stella::topdown::BodyState::MOVING:
+    case kengine::topdown::BodyState::MOVING:
       animation_name.append ("walking-");
       break;
     default:
@@ -61,19 +61,19 @@ void Player::SetState (const stella::component::Body2D& body, stella::component:
   // If we have defined a animation (BodyState is IDLE or MOVING)
   if (!animation_name.empty())
   {
-    if (body.Body->direction & stella::topdown::BodyDirection::LEFT)
+    if (body.Body->direction & kengine::topdown::BodyDirection::LEFT)
     {
       animation_name.append (1, 'l');
     }
-    else if (body.Body->direction & stella::topdown::BodyDirection::RIGHT)
+    else if (body.Body->direction & kengine::topdown::BodyDirection::RIGHT)
     {
       animation_name.append (1, 'r');
     }
-    else if (body.Body->direction & stella::topdown::BodyDirection::TOP)
+    else if (body.Body->direction & kengine::topdown::BodyDirection::TOP)
     {
       animation_name.append (1, 't');
     }
-    else if (body.Body->direction & stella::topdown::BodyDirection::BOTTOM)
+    else if (body.Body->direction & kengine::topdown::BodyDirection::BOTTOM)
     {
       animation_name.append (1, 'b');
     }

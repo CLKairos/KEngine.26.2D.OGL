@@ -1,33 +1,33 @@
 #include "game.hpp"
 #include <random>
-#include "stella/systems/render.hpp"
-#include "stella/systems/group.hpp"
-#include "stella/systems/animation_player.hpp"
-#include "stella/components/sprite.hpp"
-#include "stella/components/position.hpp"
-#include "stella/components/animation_player.hpp"
+#include "kengine/systems/render.hpp"
+#include "kengine/systems/group.hpp"
+#include "kengine/systems/animation_player.hpp"
+#include "kengine/components/sprite.hpp"
+#include "kengine/components/position.hpp"
+#include "kengine/components/animation_player.hpp"
 
 namespace nikte
 {
-Game::Game() : stella::core::Game (896, 504, "Nikte")
+Game::Game() : kengine::core::Game (896, 504, "Nikte")
 {
   m_script_api.set_function ("e_get_player_id", [this]() { return m_player.entity; });
   m_script_api.run_script ("scripts/main.lua");
   m_script_api.run_function ("load_assets");
 
   //m_tile_map.load();
-  m_render_system = std::make_shared<stella::system::RenderT> (m_registry, m_textures);
-  this->add_system<stella::system::AnimationPlayer>();
-  // this->add_system<stella::system::Color> (m_registry);
-  this->add_system<stella::system::Group> (m_registry);
-  this->add_system<stella::system::Timer> (m_registry);
-  this->add_system<stella::system::Physics> (m_tile_map, m_registry);
-  this->add_system<stella::system::Tile> (m_tile_map, m_camera, m_registry);
-  this->add_system<stella::system::Text> (m_registry, m_fonts);
-  this->add_system<stella::system::Speech>();
-  this->add_system<stella::system::NPC> (m_registry, m_player.entity);
-  this->add_system<stella::system::CharacterAnimation>();
-  // //this->add_system<stella::system::Fog> (m_registry, m_initial_width, m_initial_height);
+  m_render_system = std::make_shared<kengine::system::RenderT> (m_registry, m_textures);
+  this->add_system<kengine::system::AnimationPlayer>();
+  // this->add_system<kengine::system::Color> (m_registry);
+  this->add_system<kengine::system::Group> (m_registry);
+  this->add_system<kengine::system::Timer> (m_registry);
+  this->add_system<kengine::system::Physics> (m_tile_map, m_registry);
+  this->add_system<kengine::system::Tile> (m_tile_map, m_camera, m_registry);
+  this->add_system<kengine::system::Text> (m_registry, m_fonts);
+  this->add_system<kengine::system::Speech>();
+  this->add_system<kengine::system::NPC> (m_registry, m_player.entity);
+  this->add_system<kengine::system::CharacterAnimation>();
+  // //this->add_system<kengine::system::Fog> (m_registry, m_initial_width, m_initial_height);
 
   // // m_tile_map.create_tile_entities (0, m_display.GetWidth(), 0, m_display.GetHeight());
   m_script_api.set_variable<int> ("e_map_width", m_tile_map.width());
@@ -40,41 +40,41 @@ Game::Game() : stella::core::Game (896, 504, "Nikte")
 
   // TEMP
   // auto entity = m_registry.create();
-  // m_registry.emplace<stella::component::Position>(entity, 100, 100);
-  // auto& sprite = m_registry.emplace<stella::component::SpriteT> (entity, "nikte");
+  // m_registry.emplace<kengine::component::Position>(entity, 100, 100);
+  // auto& sprite = m_registry.emplace<kengine::component::SpriteT> (entity, "nikte");
   // sprite.texture = "nikte";
   // sprite.layer = "tiles";
   // sprite.frame = 0;
-  // m_registry.emplace<stella::component::Dimension>(entity, 32, 64);
+  // m_registry.emplace<kengine::component::Dimension>(entity, 32, 64);
 
   // auto group = m_registry.create();
-  // m_registry.emplace_or_replace<stella::component::Group>(group);
+  // m_registry.emplace_or_replace<kengine::component::Group>(group);
 
   // auto entity2 = m_registry.create();
-  // auto& sprite2 = m_registry.emplace<stella::component::SpriteT> (entity2, "nikte");
+  // auto& sprite2 = m_registry.emplace<kengine::component::SpriteT> (entity2, "nikte");
   // sprite2.texture = "nikte";
   // sprite2.layer = "tiles";
   // sprite2.frame = 0;
-  // m_registry.emplace<stella::component::Position>(entity2, 120, 120);
-  // m_registry.emplace<stella::component::Dimension>(entity2, 32, 64);
+  // m_registry.emplace<kengine::component::Position>(entity2, 120, 120);
+  // m_registry.emplace<kengine::component::Dimension>(entity2, 32, 64);
 
-  // m_registry.patch<stella::component::Group>(group, [&entity, &entity2, this](auto& group)
+  // m_registry.patch<kengine::component::Group>(group, [&entity, &entity2, this](auto& group)
   // {
   //   group.add (entity, m_registry);
   //   group.add (entity2, m_registry);
   // });
 
-  // m_registry.patch<stella::component::Position>(group, [](auto& pos)
+  // m_registry.patch<kengine::component::Position>(group, [](auto& pos)
   // {
   //   pos.x += 300;
   // });
 
-  // auto& anim = m_registry.emplace<stella::component::AnimationPlayer>(entity);
-  // stella::component::AnimationData anim_data;
+  // auto& anim = m_registry.emplace<kengine::component::AnimationPlayer>(entity);
+  // kengine::component::AnimationData anim_data;
   // anim_data.step = 0.1f;
   // anim_data.frames = std::vector<unsigned int>{1, 2, 3, 4, 5, 6, 7, 8};
   // anim.add("moving", anim_data);
-  // anim.state = stella::component::AnimationPlayer::PLAY;
+  // anim.state = kengine::component::AnimationPlayer::PLAY;
   // anim.loop = true;
   // TEMP
 
@@ -154,8 +154,8 @@ void Game::m_load_flower (const int x, const int y)
   // }
 
   // auto flower = m_registry.create();
-  // m_registry.emplace<stella::component::Position> (flower, x, y, 2);
-  // m_registry.emplace<stella::component::Dimension> (flower, 16, 16);
-  // m_registry.emplace<stella::component::Sprite> (flower, "flowers", glm::vec2 (16.f, 16.f), "tiles", frame);
+  // m_registry.emplace<kengine::component::Position> (flower, x, y, 2);
+  // m_registry.emplace<kengine::component::Dimension> (flower, 16, 16);
+  // m_registry.emplace<kengine::component::Sprite> (flower, "flowers", glm::vec2 (16.f, 16.f), "tiles", frame);
 }
 } // namespace nikte
