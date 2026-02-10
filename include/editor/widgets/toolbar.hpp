@@ -14,7 +14,7 @@
 #define ICON_FA_PLUS          u8"\uf067"
 #define ICON_FA_MOUSE_POINTER u8"\uf245"
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -45,4 +45,4 @@ namespace widget
     const ImVec2& size() { return m_size; }
   };
 } // namespace widget
-} // namespace stella
+} // namespace kengine

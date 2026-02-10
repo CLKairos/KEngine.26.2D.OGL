@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../stella/graphics/shape.hpp"
-#include "../stella/graphics/framebuffer.hpp"
+#include "../kengine/graphics/shape.hpp"
+#include "../kengine/graphics/framebuffer.hpp"
 #include "widgets/chat.hpp"
-#include "stella/graphics/layers/shape_layer.hpp"
+#include "kengine/graphics/layers/shape_layer.hpp"
 #include "widgets/console.hpp"
 #include "widgets/inspector.hpp"
 #include "./log_system.hpp"
@@ -11,7 +11,7 @@
 #include "widgets/tileset_editor.hpp"
 #include "widgets/scene.hpp"
 #include <entt/entity/registry.hpp> // IWYU pragma: export
-//#include "../stella/core/game.hpp"
+//#include "../kengine/core/game.hpp"
 #include "state.hpp"
 #include "widgets/toolbar.hpp"
 #include "../../lib/imgui/imgui.h"                       // IWYU pragma: export
@@ -27,7 +27,7 @@ namespace nikte
 class Game;
 }
 
-namespace stella
+namespace kengine
 {
 namespace editor
 {
@@ -109,4 +109,4 @@ namespace editor
   };
 
 } // namespace editor
-} // namespace stella
+} // namespace kengine

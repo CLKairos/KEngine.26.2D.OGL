@@ -3,20 +3,20 @@
 #include "entt/entity/storage.hpp"
 #include "entt/entity/utility.hpp"
 #include "editor/components/selected.hpp"
-#include "stella/components/position.hpp"
-#include "stella/components/dimension.hpp"
-#include "stella/components/color.hpp"
-#include "stella/components/sprite.hpp"
-#include "stella/components/camera.hpp"
-#include "stella/components/in_group.hpp"
-#include "stella/components/tile.hpp"
+#include "kengine/components/position.hpp"
+#include "kengine/components/dimension.hpp"
+#include "kengine/components/color.hpp"
+#include "kengine/components/sprite.hpp"
+#include "kengine/components/camera.hpp"
+#include "kengine/components/in_group.hpp"
+#include "kengine/components/tile.hpp"
 #include <entt/entity/registry.hpp>
 
 // TEMP
 #include <iostream>
 // TEMP
 
-namespace stella
+namespace kengine
 {
 namespace system
 {
@@ -143,4 +143,4 @@ namespace system
     }
   }
 } // namespace system
-} // namespace stella
+} // namespace kengine

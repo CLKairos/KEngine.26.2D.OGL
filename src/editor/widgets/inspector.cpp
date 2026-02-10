@@ -3,10 +3,10 @@
 #include "editor/components/selected.hpp"
 
 // TEMP
-#include "stella/components.hpp" // IWYU pragma: export
+#include "kengine/components.hpp" // IWYU pragma: export
 // TEMP
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -86,4 +86,4 @@ namespace widget
     }
   }
 } // namespace widget
-} // namespace stella
+} // namespace kengine

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "stella/components/npc.hpp"
+#include "kengine/components/npc.hpp"
 #include "imgui.h"
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -12,4 +12,4 @@ namespace widget
     void operator() (entt::registry& registry, const entt::entity entity) {}
   };
 } // namespace widget
-} // namespace stella
+} // namespace kengine

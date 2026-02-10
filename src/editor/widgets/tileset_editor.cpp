@@ -3,14 +3,14 @@
 #include <string>
 #include <cmath>
 
-#include "stella/components/position.hpp"
-#include "stella/components/dimension.hpp"
-#include "stella/components/sprite.hpp"
-#include "stella/components/tile.hpp"
+#include "kengine/components/position.hpp"
+#include "kengine/components/dimension.hpp"
+#include "kengine/components/sprite.hpp"
+#include "kengine/components/tile.hpp"
 
 #include "editor/widgets/tileset_editor.hpp"
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -163,4 +163,4 @@ namespace widget
     return entity;
   }
 } // namespace widget
-} // namespace stella
+} // namespace kengine

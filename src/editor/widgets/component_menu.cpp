@@ -1,6 +1,6 @@
 #include "editor/widgets/component_menu.hpp"
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -30,4 +30,4 @@ namespace widget
   }
 
 } // namespace widget
-} // namespace stella
+} // namespace kengine

@@ -2,7 +2,7 @@
 #include "editor/components/selected.hpp"
 #include <cmath>
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -48,4 +48,4 @@ namespace widget
     }
   }
 } // namespace widget
-} // namespace stella
+} // namespace kengine

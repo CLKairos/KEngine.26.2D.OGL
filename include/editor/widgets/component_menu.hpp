@@ -1,10 +1,10 @@
 #pragma once
 #include "widget.hpp"
 #include <unordered_map>
-#include "stella/component_list.hpp"
+#include "kengine/component_list.hpp"
 #include <entt/entity/entity.hpp>
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -23,4 +23,4 @@ namespace widget
   };
 
 } // namespace widget
-} // namespace stella
+} // namespace kengine

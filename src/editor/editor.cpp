@@ -2,10 +2,10 @@
 #include "imgui_internal.h"
 
 #include "../../nikte/game.hpp"
-#include "stella/components/dimension.hpp"
-#include "stella/components/layer.hpp"
-#include "stella/components/position.hpp"
-#include "stella/components/sprite.hpp"
+#include "kengine/components/dimension.hpp"
+#include "kengine/components/layer.hpp"
+#include "kengine/components/position.hpp"
+#include "kengine/components/sprite.hpp"
 #include "editor/systems/selection.hpp"
 
 #ifdef _WIN32
@@ -17,7 +17,7 @@
 #include <cereal/cereal.hpp> // IWYU pragma: export
 #include <cmath>
 
-namespace stella
+namespace kengine
 {
 namespace editor
 {
@@ -367,7 +367,7 @@ namespace editor
   void Editor::m_handle_pan_tool (const ImGuiIO& io)
   {
     m_map_tile_pos (io, [this] (const ImVec2& map_pos) {
-      auto& pos = m_registry.get<stella::component::Position> (m_game.m_camera);
+      auto& pos = m_registry.get<kengine::component::Position> (m_game.m_camera);
       if (!is_panning)
       {
         camera_pos_without_pan = ImVec2{pos.x, pos.y};
@@ -654,4 +654,4 @@ namespace editor
     }
   }
 } // namespace editor
-} // namespace stella
+} // namespace kengine
