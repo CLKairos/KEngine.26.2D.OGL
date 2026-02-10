@@ -1,6 +1,6 @@
 #pragma once
 
-namespace stella
+namespace kengine
 {
 namespace editor
 {
@@ -16,4 +16,4 @@ namespace editor
     PAN,
   };
 } // namespace editor
-} // namespace stella
+} // namespace kengine

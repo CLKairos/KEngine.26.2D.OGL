@@ -2,11 +2,11 @@
 
 #include "widget.hpp"
 //#include "../../lib/imgui/imgui.hpp"
-#include "stella/graphics/texture.hpp"
+#include "kengine/graphics/texture.hpp"
 #include <entt/entity/entity.hpp> 
 #include <entt/entity/registry.hpp> 
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -53,4 +53,4 @@ namespace widget
     inline bool get_selected_tile_scriptable() { return m_tile_scriptable; }
   };
 } // namespace widget
-} // namespace stella
+} // namespace kengine

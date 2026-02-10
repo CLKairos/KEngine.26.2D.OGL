@@ -1,9 +1,9 @@
 #pragma once
 
-#include "stella/components/sprite.hpp"
+#include "kengine/components/sprite.hpp"
 #include "imgui.h"
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -52,4 +52,4 @@ namespace widget
     const std::vector<std::string>& m_texture_list;
   };
 } // namespace widget
-} // namespace stella
+} // namespace kengine

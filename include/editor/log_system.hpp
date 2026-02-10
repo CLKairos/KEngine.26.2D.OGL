@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../stella/components/log.hpp"
-#include "../stella/systems/system.hpp"
+#include "../kengine/components/log.hpp"
+#include "../kengine/systems/system.hpp"
 #include "widgets/console.hpp"
 
 #include <iostream>
 
-namespace stella
+namespace kengine
 {
 namespace editor
 {
@@ -35,4 +35,4 @@ namespace editor
     }
   };
 } // namespace editor
-} // namespace stella
+} // namespace kengine

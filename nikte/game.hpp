@@ -1,19 +1,19 @@
 #pragma once
 
-#include <stella/stella.hpp>  // IWYU pragma: export
-#include <stella/systems.hpp> // IWYU pragma: export
-#include <stella/core/tile_map.hpp>
-#include <stella/perlin.hpp>
+#include <kengine/kengine.hpp>  // IWYU pragma: export
+#include <kengine/systems.hpp> // IWYU pragma: export
+#include <kengine/core/tile_map.hpp>
+#include <kengine/perlin.hpp>
 
-// #ifdef STELLA_BUILD_EDITOR
+// #ifdef KENGINE_BUILD_EDITOR
 //   #include <editor/editor.h>
 //   #include <editor/widgets/map_editor.h>
 // #endif
 
 #include "player.hpp"
 
-#ifdef STELLA_BUILD_EDITOR
-namespace stella
+#ifdef KENGINE_BUILD_EDITOR
+namespace kengine
 {
 namespace editor
 {
@@ -23,25 +23,25 @@ namespace widget
 {
   class MapEditor;
 }
-} // namespace stella
+} // namespace kengine
 #endif
 
 namespace nikte
 {
-class Game : public stella::core::Game
+class Game : public kengine::core::Game
 {
 private:
   Player m_player{m_registry, m_display};
-  stella::core::TileMap m_tile_map{m_registry};
-  // stella::core::TileMap m_tile_map{"scripts/demo/church_map.xml", m_registry};
-  // stella::PerlinNoise m_perlin_generator{47};
+  kengine::core::TileMap m_tile_map{m_registry};
+  // kengine::core::TileMap m_tile_map{"scripts/demo/church_map.xml", m_registry};
+  // kengine::PerlinNoise m_perlin_generator{47};
   // std::default_random_engine m_generator;
   // std::uniform_real_distribution<double> m_perlin_distribution{0.0,1.0};
   // std::uniform_int_distribution<int> m_flower_frame_distribution{0,3};
 
-#ifdef STELLA_BUILD_EDITOR
-  friend class stella::editor::Editor;
-  friend class stella::widget::MapEditor;
+#ifdef KENGINE_BUILD_EDITOR
+  friend class kengine::editor::Editor;
+  friend class kengine::widget::MapEditor;
 #endif
 
 public:

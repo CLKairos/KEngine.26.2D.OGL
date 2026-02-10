@@ -1,9 +1,9 @@
 #include "editor/widgets/scene.hpp"
-#include "stella/graphics/utils.hpp"
+#include "kengine/graphics/utils.hpp"
 #include <vector>
 #include <cmath>
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -59,4 +59,4 @@ namespace widget
     ImGui::PopStyleVar();
   }
 } // namespace widget
-} // namespace stella
+} // namespace kengine

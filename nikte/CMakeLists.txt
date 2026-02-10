@@ -5,10 +5,10 @@ set(EXAMPLE_SOURCES main.cpp
                     player.cpp)
 add_executable(${PROJECT_NAME} ${EXAMPLE_SOURCES})
 
-if (STELLA_BUILD_EDITOR)
-    target_link_libraries(${PROJECT_NAME} PRIVATE ${STELLA_LIBRARY_NAME} editor::editor)
+if (KENGINE_BUILD_EDITOR)
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${KENGINE_LIBRARY_NAME} editor::editor)
 else()
-    target_link_libraries(${PROJECT_NAME} PRIVATE ${STELLA_LIBRARY_NAME})
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${KENGINE_LIBRARY_NAME})
 endif()
 
 if (WIN32)

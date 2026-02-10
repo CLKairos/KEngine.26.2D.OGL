@@ -3,7 +3,7 @@
 #include "widget.hpp"
 //#include "../../lib/imgui/imgui.hpp"
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -29,4 +29,4 @@ namespace widget
     inline const bool active() const { return m_active; }
   };
 } // namespace widget
-} // namespace stella
+} // namespace kengine

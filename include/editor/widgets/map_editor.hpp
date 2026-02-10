@@ -2,14 +2,14 @@
 
 #include "widget.hpp"
 //#include "../../lib/imgui/imgui.hpp"
-#include "stella/core/tile_map.hpp"
+#include "kengine/core/tile_map.hpp"
 
 namespace nikte
 {
 class Game;
 }
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -51,4 +51,4 @@ namespace widget
     inline const std::string get_map_path() const { return std::string (m_path); }
   };
 } // namespace widget
-} // namespace stella
+} // namespace kengine

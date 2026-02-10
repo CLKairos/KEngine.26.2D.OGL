@@ -1,0 +1,25 @@
+#pragma once
+
+#include "kengine/components/animation_player.hpp"
+#include "kengine/components/body2d.hpp"
+#include "kengine/components/camera.hpp"
+#include "kengine/components/character_animation.hpp"
+#include "kengine/components/charcode.hpp"
+#include "kengine/components/color.hpp"
+#include "kengine/components/dimension.hpp"
+#include "kengine/components/layer.hpp"
+#include "kengine/components/npc.hpp"
+#include "kengine/components/position.hpp"
+#include "kengine/components/script.hpp"
+#include "kengine/components/shape.hpp"
+#include "kengine/components/speech_container.hpp"
+#include "kengine/components/group.hpp"
+#include "kengine/components/sprite.hpp"
+#include "kengine/components/text.hpp"
+#include "kengine/components/tile.hpp"
+#include "kengine/components/timer.hpp"
+#include "kengine/components/typewriter.hpp"
+
+// TODO: Add widgets for the following new components
+#include "kengine/components/transform.hpp"
+#include "kengine/components/vertical.hpp"

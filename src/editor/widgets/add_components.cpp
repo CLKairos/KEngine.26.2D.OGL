@@ -1,7 +1,7 @@
 #include "editor/widgets/add_components.hpp"
 #include "editor/components/selected.hpp"
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -38,4 +38,4 @@ namespace widget
     }
   }
 } // namespace widget
-} // namespace stella
+} // namespace kengine

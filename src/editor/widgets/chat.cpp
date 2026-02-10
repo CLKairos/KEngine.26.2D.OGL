@@ -1,14 +1,14 @@
 #include "editor/widgets/chat.hpp"
-#include "stella/components/dimension.hpp"
-#include "stella/components/player.hpp"
-#include "stella/components/position.hpp"
-#include "stella/components/speech_container.hpp"
-#include "stella/components/text.hpp"
-#include "stella/components/timer.hpp"
+#include "kengine/components/dimension.hpp"
+#include "kengine/components/player.hpp"
+#include "kengine/components/position.hpp"
+#include "kengine/components/speech_container.hpp"
+#include "kengine/components/text.hpp"
+#include "kengine/components/timer.hpp"
 
 #include <iostream>
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -97,11 +97,11 @@ namespace widget
         add_log ("%s", editable_buffer);
         add_log ("%c", '\n');
 
-        const auto player_entity = *registry.view<stella::component::Player>().begin();
+        const auto player_entity = *registry.view<kengine::component::Player>().begin();
 
         auto text_entity = registry.create();
-        registry.emplace<stella::component::Position> (text_entity, 0.0f, -100.0f);
-        registry.emplace<stella::component::Text> (
+        registry.emplace<kengine::component::Position> (text_entity, 0.0f, -100.0f);
+        registry.emplace<kengine::component::Text> (
             text_entity, m_converter.from_bytes (std::string (editable_buffer)), "1980");
         registry.emplace<component::Timer> (
             text_entity,
@@ -126,4 +126,4 @@ namespace widget
     ImGui::End();
   }
 } // namespace widget
-} // namespace stella
+} // namespace kengine

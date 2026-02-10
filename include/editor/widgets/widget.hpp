@@ -3,7 +3,7 @@
 #include "../../lib/imgui/imgui.h" // IWYU pragma: export
 #include <string>
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -23,4 +23,4 @@ namespace widget
     inline const std::string& get_name() const { return m_name; }
   };
 } // namespace widget
-} // namespace stella
+} // namespace kengine

@@ -1,13 +1,13 @@
 
 #include "editor/widgets/toolbar.hpp"
 #include "editor/components/selected.hpp"
-#include "stella/components/position.hpp"
-#include "stella/components/dimension.hpp"
-#include "stella/components/sprite.hpp"
+#include "kengine/components/position.hpp"
+#include "kengine/components/dimension.hpp"
+#include "kengine/components/sprite.hpp"
 
 #include <iostream>
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -174,4 +174,4 @@ namespace widget
   }
 
 } // namespace widget
-} // namespace stella
+} // namespace kengine

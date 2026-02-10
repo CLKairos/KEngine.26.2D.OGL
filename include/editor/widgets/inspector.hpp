@@ -5,7 +5,7 @@
 #include <entt/entity/registry.hpp> // IWYU pragma: export
 #include "add_components.hpp"
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -43,4 +43,4 @@ namespace widget
     inline entt::entity get_selected_entity() const { return m_selected_entity; }
   };
 } // namespace widget
-} // namespace stella
+} // namespace kengine

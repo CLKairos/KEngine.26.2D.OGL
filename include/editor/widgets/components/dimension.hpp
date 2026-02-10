@@ -1,9 +1,9 @@
 #pragma once
 
-#include "stella/components/dimension.hpp"
+#include "kengine/components/dimension.hpp"
 #include "imgui.h"
 
-namespace stella
+namespace kengine
 {
 namespace widget
 {
@@ -24,4 +24,4 @@ namespace widget
     }
   };
 } // namespace widget
-} // namespace stella
+} // namespace kengine
