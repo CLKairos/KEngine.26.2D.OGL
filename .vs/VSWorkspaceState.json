@@ -1,0 +1,22 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
+    ]
+  },
+  "ExpandedNodes": [
+    "",
+    "\\cmake\\modules",
+    "\\lib\\imgui\\examples",
+    "\\lib\\imgui\\examples\\example_glfw_opengl3",
+    "\\lib\\sdl2",
+    "\\lib\\sdl2\\VisualC",
+    "\\lib\\sdl2\\VisualC\\SDLmain",
+    "\\lib\\sdl2\\VisualC\\tests",
+    "\\lib\\sdl2\\VisualC\\tests\\checkkeys",
+    "\\lib\\sdl2\\VisualC\\tests\\testfile"
+  ],
+  "SelectedNode": "\\lib",
+  "PreviewInSolutionExplorer": false
+}
